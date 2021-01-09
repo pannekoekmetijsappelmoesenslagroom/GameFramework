@@ -77,19 +77,13 @@ public class LoginView {
         name = new TextField();
         name.setPrefColumnCount(20);
         name.setPromptText("Username");
-
-        String[] namesuggestions = {"Jelmer","Wisse","Arjen","Wouter","oldAI","newAI"};
-        TextFields.bindAutoCompletion(name,namesuggestions);
-
+        name.setText("GameFramework");
 
         serverUrl = new TextField();
         serverUrl.setPrefColumnCount(20);
         serverUrl.setPromptText("Server address");
-        //serverUrl.setText("Localhost");
-
-        String[] suggestions = {"77.162.40.81","Localhost","145.33.225.170"};
-        TextFields.bindAutoCompletion(serverUrl,suggestions);
-
+        serverUrl.setText("Localhost");
+        
         port = new TextField();
         port.setPrefColumnCount(20);
         port.setPromptText("Port");
@@ -114,10 +108,8 @@ public class LoginView {
     private void setbutton(GridPane grid)
     {
         grid.setVgap(5.0);
-        login = new Button();
+        login = new Button("loginetje");
         login.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
-        Image loginPic = new Image("/Images/login2.jpg");
-        login.setGraphic(new ImageView(loginPic));
         login.setStyle("-fx-background-color: transparent;");
 
         HBox hbBtn = new HBox(10);
